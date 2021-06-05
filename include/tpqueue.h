@@ -20,14 +20,14 @@ class TPQueue {
     item->data = data;
     return item;
   }
- 
+
  public:
   TPQueue() :tail(nullptr), head(nullptr) {}
   ~TPQueue() {
     while (head)
       pop();
   }
- 
+
   void push(const T& data) {
     if (tail && head) {
       ITEM* current = tail;
